@@ -33,6 +33,15 @@ public class MethodAndArrays {
             File score = new File("playerData2.txt");
             
             Scanner FileIn = new Scanner(score);
+            int currentIndex = 0; 
+            while(FileIn.hasNext()){
+                String[] next = FileIn.nextLine().split("");
+              Name[currentIndex] = next[0];
+              scores[currentIndex] = Integer.parseInt(next[1]);
+              
+              currentIndex++;
+              
+            }
                     
         } catch (FileNotFoundException ex) {
             
